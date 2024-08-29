@@ -15,4 +15,8 @@ import {
 })
 export class AppComponent {
   title = 'moon';
+
+  handleButtonClick() {
+    console.log('Button clicked!');
+  }
 }

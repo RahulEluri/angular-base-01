@@ -1,3 +1,15 @@
 <!-- <app-nx-welcome></app-nx-welcome> <router-outlet></router-outlet>
   -->
-<mars-button-ui-button></mars-button-ui-button>
+<div
+  class="d-flex justify-content-center align-items-center"
+  style="height: 100vh"
+>
+  <mars-button-ui-button
+    [config]="{
+      label: 'Submit',
+      type: 'submit',
+      onClick: handleButtonClick,
+      isDisabled: false
+    }"
+  ></mars-button-ui-button>
+</div>

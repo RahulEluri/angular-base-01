@@ -1,1 +1,8 @@
-<p>ui-button works!</p>
+<button
+  [disabled]="config.isDisabled"
+  [type]="config.type"
+  (click)="handleClick()"
+  class="btn btn-danger px-3 fw-1"
+>
+  {{ config.label }}
+</button>
