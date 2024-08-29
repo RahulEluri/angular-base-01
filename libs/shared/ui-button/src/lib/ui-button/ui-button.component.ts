@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 export interface ButtonConfig {
   isDisabled?: boolean;
@@ -17,6 +18,7 @@ export class UiButtonComponent {
 
   handleClick() {
     if (this.config.onClick) {
+      debugger;
       this.config.onClick();
     }
   }

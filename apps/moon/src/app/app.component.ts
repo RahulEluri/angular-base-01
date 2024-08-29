@@ -1,14 +1,17 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import {
-  SharedUiButtonModule,
-  UiButtonComponent,
-} from 'component-base-ui-button';
+import { SharedUiButtonModule } from 'component-base-ui-button';
+import { SharedUiPasswordModule } from 'component-base-ui-password';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule, SharedUiButtonModule],
+  imports: [
+    NxWelcomeComponent,
+    RouterModule,
+    SharedUiButtonModule,
+    SharedUiPasswordModule,
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
