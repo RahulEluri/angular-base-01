@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "component-base-ui-button": ["libs/shared/ui-button/src/index.ts"]
+      "component-base-ui-button": ["libs/shared/ui-button/src/index.ts"],
+      "component-base-ui-password": ["libs/shared/ui-password/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
