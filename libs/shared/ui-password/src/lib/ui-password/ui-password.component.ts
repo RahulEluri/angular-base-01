@@ -20,10 +20,10 @@ export class UiPasswordComponent implements OnInit {
     this.passwordForm = this.fb.group({
       password: ['', [Validators.required, Validators.minLength(8)]],
     });
-    console.log('Form initialized:', this.passwordForm);
   }
 
-  onSubmit() {
-    console.log('Password:', this.passwordForm.value.password);
+  onSubmit(formGroup: FormGroup) {
+    console.log('formGroup :', formGroup);
+    console.log('Password:', formGroup.value.password);
   }
 }

@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 export interface ButtonConfig {
   isDisabled?: boolean;
   type?: string;
   label: string;
-  onClick?: () => any;
+  onClick?: (formGroup: FormGroup) => any;
 }
 
 @Component({
@@ -13,13 +13,19 @@ export interface ButtonConfig {
   templateUrl: './ui-button.component.html',
   styleUrl: './ui-button.component.css',
 })
-export class UiButtonComponent {
+export class UiButtonComponent implements OnChanges {
   @Input() config!: ButtonConfig;
+  @Input() formGroup!: FormGroup;
+
+  ngOnChanges(changes: SimpleChanges): void {
+    // console.log(changes['config'].currentValue);
+  }
 
   handleClick() {
+    debugger;
+    console.log('config :', this.config);
     if (this.config.onClick) {
-      debugger;
-      this.config.onClick();
+      this.config.onClick(this.formGroup);
     }
   }
 }
