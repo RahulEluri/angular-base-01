@@ -22,7 +22,6 @@ export class UiButtonComponent implements OnChanges {
   }
 
   handleClick() {
-    debugger;
     console.log('config :', this.config);
     if (this.config.onClick) {
       this.config.onClick(this.formGroup);
